@@ -1,0 +1,23 @@
+PImage photo;
+
+void setup() {
+  size(1000,1000);
+  photo = loadImage("Captura.PNG");
+}
+
+/*
+Per fer aquest exercici he utilitzat dos bucles,
+un que va agmentant imbricats, un que pinta les imatges 
+i un altre que canvia de "fila"
+*/
+void draw() {
+  int files =0;
+  int columnes = 0;
+  photo.resize(100,100);
+  for(int c=0; c < 1000; c=c+100){
+    for(int i=0; i < 1000; i=i+100){
+        image(photo, c, i);
+      }
+  }
+        
+}
